@@ -11,7 +11,5 @@ import { InvestmentResultsComponent } from './investment-results/investment-resu
   styleUrl: './header/header.component.css',
 })
 export class AppComponent {
-  title = 'Inestment-Calculator';
-  
-
+  title = 'Investment-Calculator';
 }
