@@ -13,6 +13,7 @@ export class UserInputComponent {
   enteredAnnualInvestment = '0';
   enteredExpectedReturn = '5'; //default return value
   enteredDuration = '10';
+  
 
   onSubmit () {
     console.log('SUBMITTED!');
