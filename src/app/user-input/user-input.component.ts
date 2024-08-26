@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import type { InvestmentInput } from '../investment-input.model';
 
 @Component({
   selector: 'app-user-input',
@@ -9,17 +10,22 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  @Output() calculate = new EventEmitter<{
-    initialInvestment: number, 
-    duration: number, 
-    expectedReturn: number, 
-    annualInvestment: number
-  }>();  //or  calculate = output() 
+  // @Output() calculate = new EventEmitter<{
+  //   initialInvestment: number, 
+  //   duration: number, 
+  //   expectedReturn: number, 
+  //   annualInvestment: number
+  // }>();  //or  calculate = output() 
+  // enteredInitialInvestment = '0'; //because the value one will get from an input will always be a string even if a number was entered.
+  // enteredAnnualInvestment = '0';
+  // enteredExpectedReturn = '5'; //default return value
+  // enteredDuration = '10';
+
+  @Output() calculate = new EventEmitter<InvestmentInput>();  //or  calculate = output() 
   enteredInitialInvestment = '0'; //because the value one will get from an input will always be a string even if a number was entered.
   enteredAnnualInvestment = '0';
   enteredExpectedReturn = '5'; //default return value
   enteredDuration = '10';
-
 
  /*  onSubmit () {
     console.log('SUBMITTED!');
