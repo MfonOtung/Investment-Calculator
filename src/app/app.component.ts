@@ -16,12 +16,22 @@ import type { InvestmentInput } from './investment-input.model';
 } */
 
 export class AppComponent {
+ 
   // onCalculateInvestmentResults(data: {
   //   initialInvestment: number, 
   //   duration: number, 
   //   expectedReturn: number, 
   //   annualInvestment: number
   // }) 
+
+  resultsData?: {
+    year: number,
+    interest: number,
+    valueEndOfYear: number,
+    annualInvestment: number,
+    totalInterest: number,
+    totalAmountInvested: number,
+  }[];
   onCalculateInvestmentResults (data: InvestmentInput) {
     const { initialInvestment, annualInvestment, expectedReturn, duration} = data;
     const annualData = [];
@@ -43,6 +53,9 @@ export class AppComponent {
       });
     }
     //return annualData;
-    console.log(annualData);
+    //console.log(annualData);
+    this.resultsData = annualData;
+
+
   }
 }
