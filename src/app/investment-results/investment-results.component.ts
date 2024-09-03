@@ -33,7 +33,7 @@ import { Component, Input, input } from '@angular/core';*/
 //USING SIGNAL
 
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input, inject, input } from '@angular/core';
+import { Component, Input, computed, inject, input } from '@angular/core';
 import { InvestmentService } from '../investment.service';
 
 @Component({
@@ -46,12 +46,17 @@ import { InvestmentService } from '../investment.service';
 export class InvestmentResultsComponent {
   private investmentService = inject(InvestmentService);
  
-  //To expose the result to the template, add a getter.
-  get results() {
+  //To expose the result to the template, add a getter. (To expose the resultData from the service through the getter.)
+  /* get results() {
     return this.investmentService.resultData;
+ */  
 
-    //To expose the resultData from the service through the getter.
+ //or,
+  results = computed(() => this.investmentService.resultData());   //A computed read-only signal
+
+  //or,
+  /*results = this.investmentService.resultData.asReadonly();*/
   }
 
-}
+
 
