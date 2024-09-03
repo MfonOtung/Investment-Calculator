@@ -115,17 +115,17 @@ import type { InvestmentInput } from './investment-input.model'; */
 
 //USING SERVICE.
 import { Component, signal } from '@angular/core';
-import { HeaderComponent } from "./header/header.component";
-import { UserInputComponent } from './user-input/user-input.component';
-import { InvestmentResultsComponent } from './investment-results/investment-results.component';
-import type { InvestmentInput } from './investment-input.model';
+//import { HeaderComponent } from "./header/header.component";
+//import { UserInputComponent } from './user-input/user-input.component';
+//import { InvestmentResultsComponent } from './investment-results/investment-results.component';
+//import type { InvestmentInput } from './investment-input.model';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  //standalone: true,
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
-  styleUrl: './header/header.component.css',
+  //imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
+  //styleUrl: './header/header.component.css',
 })
 
 export class AppComponent { 

@@ -32,14 +32,14 @@ import { Component, Input, input } from '@angular/core';*/
 
 //USING SIGNAL
 
-import { CurrencyPipe } from '@angular/common';
+//import { CurrencyPipe } from '@angular/common';
 import { Component, Input, computed, inject, input } from '@angular/core';
 import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-investment-results',
-  standalone: true,
-  imports: [CurrencyPipe],
+  //standalone: true,
+  //imports: [CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css'
 })
